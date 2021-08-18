@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Simulator</title>
+</head>
+<body>
+    <center>
+    <div>
+    <h1>Poll Simulator</h1>
+     <h2>Vote</h2>
+     <form method="POST" action="/votec">
+     <h3>Student ID: <input type="text" name="id"> </input> </h3>
+     {{#if cans.length}}
+        {{#each cans}}
+        <input type="radio" name="vote" value={{this.name}}>{{this.name}}</input> <br>
+        {{/each}}
+     {{/if}}
+        <button type="submit">Submit</button>
+        <h4>{{msg}}</h4>
+     </form> 
+     <h3><a href="/" >HomePage</a></h3>
+     </div>
+     </center
+</body>
+</html>
